@@ -19,15 +19,31 @@ var app = builder.Build();
 
 app.MapGet("/tasks", () =>
 {
-    var task = new TaskItem
+    var tasks = new List<TaskItem>
     {
-        Id = 1, 
-        Title = "Learn .NET", 
-        IsCompleted = false 
-        
+        new TaskItem
+        {
+            Id = 1,
+            Title = "Learn C#",
+            IsCompleted = true
+        },
+
+        new TaskItem
+        {
+            Id = 2,
+            Title = "Learn .NET",
+            IsCompleted = false
+        },
+
+        new TaskItem
+        {
+            Id = 3,
+            Title = "Build my first API",
+            IsCompleted = false
+        }
     };
 
-    return task;
+    return tasks;
 });
 
 
