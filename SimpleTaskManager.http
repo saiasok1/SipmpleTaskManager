@@ -1,6 +1,21 @@
 @SimpleTaskManager_HostAddress = http://localhost:5085
 
-GET {{SimpleTaskManager_HostAddress}}/tasks/3
+GET {{SimpleTaskManager_HostAddress}}/tasks/
 Accept: application/json
 
 ###
+GET {{SimpleTaskManager_HostAddress}}/andi
+
+###
+
+GET {{SimpleTaskManager_HostAddress}}/square/4
+
+###
+
+POST {{SimpleTaskManager_HostAddress}}/tasks
+Content-Type: application/json
+
+{
+  "title": "Learn Angular",
+  "isCompleted": false
+}

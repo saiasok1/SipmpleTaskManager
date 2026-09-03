@@ -58,6 +58,22 @@ app.MapGet("/tasks/{id}", (int id) =>
     return Results.Ok(task);
 });
 
+app.MapGet("/square/{number}", (int number) =>
+{
+    return Results.Ok(number * number);
+    
+});
+
+
+app.MapPost("/tasks", (TaskItem task)=>
+{
+    task.Id = tasks.Count + 1;
+    tasks.Add(task);
+
+    return Results.Created($"/tasks/{task.Id}", task);
+});
+
+
 
 
 
