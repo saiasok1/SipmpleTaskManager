@@ -1,6 +1,6 @@
 @SimpleTaskManager_HostAddress = http://localhost:5085
 
-GET {{SimpleTaskManager_HostAddress}}/tasks/
+GET {{SimpleTaskManager_HostAddress}}/tasks/3
 Accept: application/json
 
 ###

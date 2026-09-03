@@ -31,3 +31,4 @@ E:\dotNet\SimpleTaskManager\obj\Debug\net10.0\refint\SimpleTaskManager.dll
 E:\dotNet\SimpleTaskManager\obj\Debug\net10.0\SimpleTaskManager.pdb
 E:\dotNet\SimpleTaskManager\obj\Debug\net10.0\SimpleTaskManager.genruntimeconfig.cache
 E:\dotNet\SimpleTaskManager\obj\Debug\net10.0\ref\SimpleTaskManager.dll
+E:\dotNet\SimpleTaskManager\obj\Debug\net10.0\SimpleTaskManager.sourcelink.json
