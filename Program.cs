@@ -89,6 +89,19 @@ app.MapPut("/tasks/{id}", (int id, TaskItem updatedTask) =>
 });
 
 
+app.MapDelete("/tasks/{id}", (int id) =>
+{
+    var task = tasks.Find(task => task.Id == id);
+    if (task == null)
+    {
+        return Results.NotFound();
+    }
+
+    tasks.Remove(task);
+    return Results.NoContent();
+});
+
+
 
 app.Run();
 

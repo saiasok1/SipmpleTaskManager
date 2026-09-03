@@ -30,3 +30,7 @@ Content-Type: application/json
   "title": "Learn .NET Core",
   "isCompleted": true
 }
+
+###
+
+DELETE {{SimpleTaskManager_HostAddress}}/tasks/1
