@@ -19,3 +19,14 @@ Content-Type: application/json
   "title": "Learn Angular",
   "isCompleted": false
 }
+
+###
+
+PUT {{SimpleTaskManager_HostAddress}}/tasks/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Learn .NET Core",
+  "isCompleted": true
+}

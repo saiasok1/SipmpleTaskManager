@@ -73,7 +73,20 @@ app.MapPost("/tasks", (TaskItem task)=>
     return Results.Created($"/tasks/{task.Id}", task);
 });
 
+app.MapPut("/tasks/{id}", (int id, TaskItem updatedTask) =>
+{
+    var task = tasks.Find(task => task.Id == id);
 
+    if (task == null)
+    {
+        return Results.NotFound();
+    }
+
+    task.Title = updatedTask.Title;
+    task.IsCompleted = updatedTask.IsCompleted;
+
+    return Results.Ok(task);
+});
 
 
 
