@@ -9,9 +9,9 @@ namespace SimpleTaskManager.Controllers;
 
 public class TaskController : ControllerBase
 {
-    private readonly TaskServices taskservices;
+    private readonly ITaskService taskservices;
 
-    public TaskController(TaskServices taskservices)
+    public TaskController(ITaskService taskservices)
     {
         this.taskservices = taskservices;
     }

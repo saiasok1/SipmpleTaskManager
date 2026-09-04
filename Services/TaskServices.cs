@@ -2,7 +2,7 @@ using SimpleTaskManager.Models;
 
 namespace SimpleTaskManager.Services;
 
-public class TaskServices
+public class TaskService : ITaskService
 {
     private readonly List<TaskItem> tasks = new()
     {
