@@ -4,11 +4,9 @@ GET {{SimpleTaskManager_HostAddress}}/tasks/
 Accept: application/json
 
 ###
-GET {{SimpleTaskManager_HostAddress}}/andi
 
-###
-
-GET {{SimpleTaskManager_HostAddress}}/square/4
+GET {{SimpleTaskManager_HostAddress}}/square/5
+Accept: application/json
 
 ###
 
