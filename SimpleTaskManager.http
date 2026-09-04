@@ -33,4 +33,4 @@ Content-Type: application/json
 
 ###
 
-DELETE {{SimpleTaskManager_HostAddress}}/tasks/1
+DELETE {{SimpleTaskManager_HostAddress}}/tasks/6
