@@ -32,4 +32,40 @@ public class TaskServices
     {
         return tasks;
     }
+
+    public TaskItem? GetById(int id)
+    {
+        return tasks.Find(task => task.Id == id);
+    }
+
+    public TaskItem Create(TaskItem task)
+    {
+        task.Id = tasks.Count + 1;
+        tasks.Add(task);
+        return task;
+    }
+
+    public bool Update(int id, TaskItem updatedTask)
+    {
+        var task = GetById(id);
+        if (task == null)
+        {
+            return false;
+        }
+
+        task.Title = updatedTask.Title;
+        task.IsCompleted = updatedTask.IsCompleted;
+        return true;   
+    }
+
+    public bool Delete(int id)
+    {
+        var task = GetById(id);
+        if (task == null)
+        {
+            return false;
+        }  
+        tasks.Remove(task);
+        return true;
+    }
 }

@@ -27,10 +27,10 @@ Content-Type: application/json
 
 {
   "id": 1,
-  "title": "Learn .NET Core",
+  "title": "Fisnished Angular",
   "isCompleted": true
 }
 
 ###
 
-DELETE {{SimpleTaskManager_HostAddress}}/tasks/6
+DELETE {{SimpleTaskManager_HostAddress}}/tasks/2
