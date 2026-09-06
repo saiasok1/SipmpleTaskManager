@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SimpleTaskManager.Models;
 using SimpleTaskManager.Services;
+using SimpleTaskManager.DTOs;
 
 namespace SimpleTaskManager.Controllers;
 
@@ -42,8 +43,14 @@ public class TaskController : ControllerBase
     //POST action
     //POST /tasks
     [HttpPost]
-    public IActionResult CreateTask(TaskItem task)
+    public IActionResult CreateTask(CreateTaskRequest request)
     {
+        var task = new TaskItem
+        {
+            Title = request.Title,
+            IsCompleted = request.IsCompleted
+        };
+
         var createdTask = taskservices.Create(task);
         return Created($"/tasks/{createdTask.Id}", createdTask);
     }
@@ -51,8 +58,15 @@ public class TaskController : ControllerBase
     //PUT action
     //PUT /tasks/{id}
     [HttpPut("{id}")]
-    public IActionResult UpdateTask(int id, TaskItem updatedTask)
+    public IActionResult UpdateTask(int id, UpdateTaskRequest request)
     {
+
+        var updatedTask = new TaskItem
+        {
+            Title = request.Title,
+            IsCompleted = request.IsCompleted
+        };
+
         var isUpdated = taskservices.Update(id, updatedTask);
         if (!isUpdated)
         {

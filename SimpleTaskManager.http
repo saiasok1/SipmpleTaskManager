@@ -14,6 +14,7 @@ POST {{SimpleTaskManager_HostAddress}}/tasks
 Content-Type: application/json
 
 {
+  "Id" : 999,
   "title": "Learn Angular",
   "isCompleted": false
 }
@@ -32,3 +33,12 @@ Content-Type: application/json
 ###
 
 DELETE {{SimpleTaskManager_HostAddress}}/tasks/2
+
+###
+POST {{SimpleTaskManager_HostAddress}}/tasks
+Content-Type: application/json
+
+{
+    "title": "Learn Angular",
+    "isCompleted": false
+}
