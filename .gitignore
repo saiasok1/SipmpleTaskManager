@@ -1,0 +1,31 @@
+# ## Build outputs
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# ## IDE and Editor Files
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# ## Packages and Dependencies
+# NuGet Packages
+*.nuget.dgspec.json
+project.lock.json
+project.fragment.lock.json
+packages/
+
+# ## Testing and Publishing
+TestResults/
+*.publish.htm
